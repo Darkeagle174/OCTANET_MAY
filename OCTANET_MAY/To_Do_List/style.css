@@ -1,0 +1,358 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap");
+
+body {
+    font-family: 'Jost';
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: background-image 0.5s ease;
+    height: 100%;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: aliceblue;
+    font-family: 'Oswald';
+}
+
+h2 {
+    color: aliceblue;
+    font-family: 'Oswald';
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    /* Add space between items */
+    align-items: center;
+    /* Center align items vertically */
+    margin-bottom: 20px;
+    font-family: 'Jost';
+}
+
+.input-group input[type="text"],
+.input-group input[type="datetime-local"],
+.input-group button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+.input-group input[type="text"],
+.input-group input[type="datetime-local"] {
+    flex: 1;
+    margin-left: 5px;
+    border: 1px solid black;
+
+}
+
+.input-group input[type="text"] {
+    padding: 11px;
+}
+
+.input-group button {
+    cursor: pointer;
+    color: white;
+    margin-left: 5px;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    font-family: 'Jost';
+    background-color: initial;
+    background-image: linear-gradient(#4609d4, #0077ff);
+    border-radius: 8px;
+    border-width: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .1), 0 3px 6px rgba(0, 0, 0, .05);
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.input-group button:hover {
+    box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
+    opacity: .85;
+}
+
+.input-group button:active {
+    outline: 0;
+}
+
+.input-group button:focus {
+    box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
+}
+
+.task-list {
+    list-style-type: none;
+    padding: 0;
+    font-family: 'Jost';
+}
+
+.task {
+    position: relative;
+    /* Position task items relative to the container */
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-family: 'Jost';
+    font-weight: bold;
+
+}
+
+.completed-task {
+    background-color: #90eaa5;
+    color: #155724;
+    text-decoration: line-through;
+    font-family: 'Jost';
+    font-weight: bold;
+}
+
+.overdue-task {
+    background-color: #f08790;
+    color: #42070c;
+    font-family: 'Jost';
+    font-weight: bold;
+}
+
+.delete-button {
+    background-color: initial;
+    background-image: linear-gradient(#e9830e, #a00404);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 5px 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .1), 0 3px 6px rgba(0, 0, 0, .05);
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    /* Position absolutely */
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-family: 'Jost';
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.delete-button:hover {
+    box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
+    opacity: .85;
+}
+
+.delete-button:active {
+    outline: 0;
+}
+
+.delete-button:focus {
+    box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
+}
+
+.undo-button {
+    background-color: initial;
+    background-image: linear-gradient(#e9830e, #d9ff00);
+    color: #000000;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 5px 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .1), 0 3px 6px rgba(0, 0, 0, .05);
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    /* Position absolutely */
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-family: 'Jost';
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.undo-button:hover {
+    box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
+    opacity: .85;
+}
+
+.undo-button:active {
+    outline: 0;
+}
+
+.undo-button:focus {
+    box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
+}
+
+.complete-button {
+    background-color: initial;
+    background-image: linear-gradient(#dcf30e, #177200);
+    /* Set complete button color to green */
+    color: #000000;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 5px 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .1), 0 3px 6px rgba(0, 0, 0, .05);
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    /* Position absolutely */
+    top: 50%;
+    right: 80px;
+    /* Adjust position to avoid overlapping */
+    transform: translateY(-50%);
+    font-family: 'Jost';
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.complete-button:hover {
+    box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
+    opacity: .85;
+}
+
+.complete-button:active {
+    outline: 0;
+}
+
+.complete-button:focus {
+    box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
+}
+
+.ct {
+    background-color: initial;
+    background-image: linear-gradient(#e427a5, #35007e);
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 15px;
+    border: none;
+    font-family: 'Jost';
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .1), 0 3px 6px rgba(0, 0, 0, .05);
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.ct:hover {
+    box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
+    opacity: .85;
+}
+
+.ct:active {
+    outline: 0;
+}
+
+.ct:focus {
+    box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
+}
+
+.text {
+    display: block;
+    width: 400px;
+    word-wrap: break-word;
+    font-family: 'Jost';
+}
+
+#completionPercentage {
+    color: aliceblue;
+    font-family: 'Jost';
+    font-weight: bold;
+    font-size: larger;
+}
+
+.progress-container {
+    margin-top: 20px;
+    height: 20px;
+    width: 100%;
+    background-color: #000000;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(45deg, #000000, #4d06b1, #022e60, #0095ff, #03d835, #eaff00, #ffc400, #ff0015, #ff00c8 );
+    border-radius: 25px;
+    transition: width 0.5s ease-in-out;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        height: 100%;
+        min-height: 100vh;
+        background-size: fill;
+        /* Use 'contain' to fit the image within the body */
+        background-position: center;
+        background-color: #000000;
+    }
+
+    .input-group {
+        flex-direction: column;
+        /* Change flex direction to column */
+        align-items: center;
+    }
+
+    .input-group input[type="text"],
+    .input-group input[type="datetime-local"],
+    .input-group button {
+        width: 100%;
+        /* Set input and button width to 100% */
+        margin-bottom: 10px;
+        /* Remove margin between input fields and buttons */
+        align-items: center;
+    }
+
+
+    .delete-button {
+        right: -24px;
+        /* Reset right positioning */
+        /* left: 50%; Move buttons to the left */
+        transform: translateX(-50%) translateY(-50%);
+        /* Center horizontally and vertically */
+
+    }
+
+    .undo-button {
+        right: -15px;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    .complete-button {
+        right: 65px;
+    }
+
+    .task {
+        font-size: 12px;
+    }
+
+    .text {
+        width: 160px;
+    }
+}
